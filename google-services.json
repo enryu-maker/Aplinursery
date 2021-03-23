@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1098733804484",
+    "project_id": "aplinursery",
+    "storage_bucket": "aplinursery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098733804484:android:fc7660a7a8de50daaae291",
+        "android_client_info": {
+          "package_name": "twominds.aplinursery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098733804484-lffer6nonia6rnv36n04uo3tmmdc5uc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_Z1h2_HBVfyy3YMQP1Rii8RjonWx64q8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1098733804484-lffer6nonia6rnv36n04uo3tmmdc5uc8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
