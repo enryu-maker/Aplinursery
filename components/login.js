@@ -1,9 +1,9 @@
 import React,{ Component } from 'react';
 import { useState } from 'react';
-import { StyleSheet, Text, View,ImageBackground, TextInput, TouchableOpacity , SafeAreaView} from 'react-native';
+import { StyleSheet, Text, View,ImageBackground, TextInput, TouchableOpacity , SafeAreaView, n} from 'react-native';
 import Home from './home';
 import Register from './register'
-//import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 export default class Login extends Component {
     

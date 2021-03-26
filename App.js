@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-//import { createStackNavigator, createAppContainer } from "react-navigation";
+import { createStackNavigator, createAppContainer } from "react-navigation";
 
 import Login from './components/login';
 import Home from './components/home';
@@ -15,16 +15,16 @@ export default class App extends React.Component {
   }
 }
 
-/*const AppNavigator = createStackNavigator({
+const AppNavigator = createStackNavigator({
   Login: {
     screen: Login
   },
   Home: {
     screen: Home
   }
-});''*/
+});
 
-//const AppContainer = createAppContainer(AppNavigator);
+const AppContainer = createAppContainer(AppNavigator);
 
 const styles = StyleSheet.create({
   container: {
