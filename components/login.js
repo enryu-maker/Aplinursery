@@ -3,9 +3,7 @@ import { useState } from 'react';
 import { StyleSheet, Text, View,ImageBackground, TextInput, TouchableOpacity , SafeAreaView, } from 'react-native';
 import Homescreen from './home';
 import Register from './register'
-//import {createStackNavigator} from 'react-navigation-stack';
-//import { createAppContainer} from 'react-native-navigation'
-
+import {createAppContainer,createSwitchNavigator} from 'react-navigation'
 function Loginscreen(){
         return (
             
@@ -151,7 +149,7 @@ const styles = StyleSheet.create({
     }
     
 })
-const AppNavigator = createStackNavigator({
+const AppNavigator = createSwitchNavigator({
     Login: {
       screen: Loginscreen
     },

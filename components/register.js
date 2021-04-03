@@ -1,7 +1,7 @@
 import React from 'react';
 import { ImageBackground, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
-import {} from '@react-navigation/native'
+import {createAppContainer,createSwitchNavigator} from 'react-navigation'
 //import Login from '../App';
 export default class Register {
     render(){ 
