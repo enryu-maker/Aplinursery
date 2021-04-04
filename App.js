@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import {  } from 'react-native-navigation';
 
 import Loginscreen from './components/login';
-import Home from './components/home';
+import Registerscreen from './components/register';
 
 
 export default class App extends React.Component {

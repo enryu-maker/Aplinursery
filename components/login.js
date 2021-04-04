@@ -15,14 +15,14 @@ function Loginscreen(){
                 <View style={styles.dataconatiner}>
 
                 <TextInput style={styles.phone}
-                placeholder='phone number'
+                placeholder='Number/मोबाइल नंबर टाका'
                 //keyboardType='number-pad'
                 returnKeyType='next'
                 placeholderTextColor="black"
                 //onChangeText={(number) => setnumber(email)}
                 />
                 <TextInput style={styles.password}
-                placeholder='password'
+                placeholder='password/पासवर्ड टाका'
                 returnKeyType='go'
                 secureTextEntry={true}
                 placeholderTextColor="black"
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     phone: {
         width:'90%',
         backgroundColor: '#609060', 
-        fontSize: 23,
+        //fontSize: 23,
         alignItems:'center',
         justifyContent:'center',
         padding: 10,
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
         marginTop: '45%',
         width:'90%',
         backgroundColor: '#609060', 
-        fontSize: 23,
+        //fontSize: 23,
         alignItems:'center',
         marginTop: 12,
         justifyContent:'center',

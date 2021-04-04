@@ -1,32 +1,32 @@
 import React from 'react';
-import { ImageBackground, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, SafeAreaView, StyleSheet, Text, View , TouchableOpacity} from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import {createAppContainer,createSwitchNavigator} from 'react-navigation'
 //import Login from '../App';
-export default class Register {
-    render(){ 
+export default function Registerscreen() {
+ 
     return (
         <View style={styles.maincontainer}>
-            <ImageBackground source={require=('../assets/signup.png')}
-            style={styles.imagebackground}/>
+            <ImageBackground source={require('../assets/signup.png')} style={styles.imagecontainer}/>
             <View>
             <SafeAreaView style={styles.headerline}>
-                <Text style={styles.Text}>Something</Text> 
+                <Text style={styles.Text}>शेतकर्‍याकडून शेतकर्‍यांना</Text> 
             </SafeAreaView>
             <View style={styles.inputholder}>
             <TextInput style={styles.phone}
-                placeholder='Enter number'
+                placeholder='Number/मोबाइल नंबर टाका'
                 returnKeyType='next'
                 placeholderTextColor="black"
+                keyboardType='number-pad'
                 />
-            <TextInput style={styles.name}
-                placeholder='Enter NAME'
+            <TextInput style={styles.username}
+                placeholder=' Name/नाव टाका'
                 returnKeyType='next'
                 placeholderTextColor='black'
                 />
-            <TextInput style={styles.name}
-                placeholder='Enter password'
-                returnKeyType='next'
+            <TextInput style={styles.userpass}
+                placeholder='password/पासवर्ड टाका'
+                returnKeyType='go'
                 placeholderTextColor='black'
                 />
             </View>
@@ -41,7 +41,7 @@ export default class Register {
             </View>
             </View>
         </View>
-    );}
+    );
 }
 
 const styles = StyleSheet.create({
@@ -49,34 +49,73 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
     },
-    imagebackground : {
+    imagecontainer : {
         position : 'absolute',
         width : '100%',
         height : '100%',
-        flex : 1
+        //flex : 1
     },
     headerline : {
-        flexDirection : 'row-reverse',
-        height:30,
+        marginTop: '6%',
         backgroundColor:'#D8F0C0',
-        //width: '50%',
         borderRadius: 15,
-
+        height:33,
+        width: '85%',
+        marginLeft : 12
     },
-    text : {
-        fontSize : 26,
+    Text : {
+ 
+        //marginLeft: '50%',
+        fontSize : 23,
         fontWeight : '400',
-        textAlignVertical: 'auto',
-        textAlign : 'auto'
+        //textAlignVertical: 'auto',
+        textAlign : 'center',
+        //paddingTop : 10,
+        
     },
     inputholder : {
-        backgroundColor : '#609060',
+        //backgroundColor : '#609060',
         justifyContent: 'flex-end',
-        marginTop : '50%',
-        height: 40,
+        marginTop : '60%',
+        //height: 40,
         padding: 10,
         width: '80%'
     },
+    phone : {
+        backgroundColor : '#609060',
+        padding: 10,
+        height: 35,
+        borderRadius: 17.5
+    },
+    username : {
+        marginTop : 10,
+        backgroundColor : '#609060',
+        padding: 10,
+        height: 35,
+        borderRadius: 17.5
+    },
+    userpass : {
+        marginTop : 10,
+        backgroundColor : '#609060',
+        padding: 10,
+        height: 35,
+        borderRadius: 17.5
+    },
+    button :{
+        marginTop: 15,
+        backgroundColor : '#487830',
+        width : '18%',
+        marginLeft : 12,
+        height : 30,
+        borderRadius : 15
+    },
+    signupbutton : {
+        marginTop: 5,
+        textAlign : 'center',
+        textAlignVertical : 'center',
+        fontSize : 25,
+        fontWeight : '400'
+    }
 
 
 
