@@ -1,83 +1,85 @@
-import React,{ Component } from 'react';
-import { useState } from 'react';
-import { StyleSheet, Text, View,ImageBackground, TextInput, TouchableOpacity , SafeAreaView, } from 'react-native';
-import Homescreen from './home';
-import Register from './register'
-import {createAppContainer,createSwitchNavigator} from 'react-navigation'
-function Loginscreen(){
+import React, { Component } from 'react'
+import { Text, StyleSheet,ScrollView, View, ImageBackground,TextInput,TouchableOpacity, SafeAreaView, KeyboardAvoidingView} from 'react-native'
+import {NavigationAction} from 'react-navigation'
+export default class Loginscreen extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            phonenumber:''
+        };
+    }
+    /*async login(phonenumber){
+        try{
+
+        }catch(error){
+            alert('Mobile Number not registered')
+        }
+    }*/
+    render() {
         return (
-            
+
             <View style={styles.maincontainer}>
+                
                <ImageBackground source={require('../assets/main.jpg')} style={styles.imagecontainer}/>
                 <View style={styles.title}>
-                <Text style={styles.text}>आपली Nursery</Text>
+                    <Text style={styles.text}>आपली Nursery</Text>
                 </View>
+                
                 <View style={styles.dataconatiner}>
-
-                <TextInput style={styles.phone}
-                placeholder='Number/मोबाइल नंबर टाका'
-                //keyboardType='number-pad'
-                returnKeyType='next'
-                placeholderTextColor="black"
-                //onChangeText={(number) => setnumber(email)}
-                />
-                <TextInput style={styles.password}
-                placeholder='password/पासवर्ड टाका'
-                returnKeyType='go'
-                secureTextEntry={true}
-                placeholderTextColor="black"
-                //onChangeText={(password) => setPassword(password)}
-                />
-                <View style={styles.mainbutton}>
-                    <TouchableOpacity
-                    style={styles.loginbutton}
-                    onPress={()=>alert('i m working')}
-                    >
-                        <Text style={styles.btntext2}>login</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                    style={styles.signupbutton}
-                    onPress={()=>this.props.navigation.navigate(Home)}
-                    ><Text style={styles.btntext2}>Signup</Text></TouchableOpacity>
+                
+                    <TextInput style={styles.phone}
+                    placeholder='Number/मोबाइल नंबर टाका'
+                    keyboardType='number-pad'
+                    returnKeyType='go'
+                    placeholderTextColor="black"
+                    onChangeText={text => this.setState({phonenumber:text})}
+                    />
+                    
+                    <View style={styles.mainbutton}>
+                        <TouchableOpacity
+                        style={styles.loginbutton}
+                        onPress={()=>alert(this.state.phonenumber)}>
+                            <Text style={styles.btntext2}>sendOTP</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                        style={styles.signupbutton}
+                        onPress={()=>{this.props.navigation.navigate('Signup');}}
+                        ><Text style={styles.btntext2}>Signup</Text></TouchableOpacity>
                     </View>
+                    
                 </View>
-            </View>
-        )
-
+                
+                
+            </View> 
+            
+            
+            
+        );
     }
-
+}
 
 const styles = StyleSheet.create({
     maincontainer: {
         width:'100%',
         height:'100%',
-        //justifyContent:'center',
-        //alignItems:'center'
     },
     title: {
-        //flexDirection: 'row',
         justifyContent:'flex-end',
-        //alignItems:'center',
-        //height:'12%',
-        top:40,
+        top:30,
         height:40,
         backgroundColor:'#D8F0C0',
         width: '50%',
         borderRadius: 20,
-        //padding:8,
-        //justifyContent:'flex-end'
-        
-        
+        padding:10,
+        marginLeft:23
     },
     text: {
+        top:2,
         flexDirection: 'row',
-        fontSize: 23,
+        fontSize: 20,
         fontWeight:'500',
-        //padding: 8,
-        //backgroundColor:'#D8F0C0',
         textAlign:'center',
-        
-        //padding:8
+        textAlignVertical:'center'
     },
     imagecontainer: {
         position: 'absolute',
@@ -87,39 +89,30 @@ const styles = StyleSheet.create({
     },
     dataconatiner: {
         alignItems:'center',
-        marginTop: '60%',
+        marginTop: '50%',
         height: 40,
-        padding: 10
+        padding: 10,
+        position: 'relative'
     },
     phone: {
         width:'90%',
         backgroundColor: '#609060', 
-        //fontSize: 23,
         alignItems:'center',
         justifyContent:'center',
         padding: 10,
         borderRadius: 20,
-        height: 45
-    },
-    password: {
-        marginTop: '45%',
-        width:'90%',
-        backgroundColor: '#609060', 
-        //fontSize: 23,
-        alignItems:'center',
-        marginTop: 12,
-        justifyContent:'center',
-        padding: 10,
-        borderRadius: 20,
-        height: 44
+        height: 45,
+        fontSize:18,
+        position: 'relative'
     },
     mainbutton: {
         marginTop: 12,
         marginLeft: '-1%',
-        //padding:10,
         height:30,
         flexDirection: 'row',
-        justifyContent:'space-evenly'
+        justifyContent:'space-evenly',
+        padding:10,
+        position: 'relative'
     },
     loginbutton: {
         backgroundColor:'#487830',
@@ -127,9 +120,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         padding:10,
         width:'35%',
-        //position: 'relative'
-        //alignItems:'baseline',
-        //justifyContent:'space-between'
+        
     },
     signupbutton: {
         backgroundColor:'#487830',
@@ -138,25 +129,16 @@ const styles = StyleSheet.create({
         marginLeft: 12,
         padding:10,
         width:'35%',
-        //position: 'relative'
-        //alignItems:'baseline',
-        //ustifyContent:'flex-end'
+        
     },
     btntext2: {
         textAlign:'center',
         fontSize: 18,
-        fontWeight: '400'
+        fontWeight: '400',
+        textAlign:'center',
+        textAlignVertical:'auto'
     }
-    
+
 })
-const AppNavigator = createSwitchNavigator({
-    Login: {
-      screen: Loginscreen
-    },
-    Home: {
-      screen: Homescreen
-    }
-  });
-  
-  const AppContainer = createAppContainer(AppNavigator);
-export default Loginscreen;
+
+   
