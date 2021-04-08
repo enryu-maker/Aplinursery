@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, ImageBackground,TouchableOpacity,SafeAreaView,TextInput } from 'react-native'
-import {NavigationAction} from 'react-navigation'
+
 export default class Registerscreen extends Component {
     constructor(props){
         super(props);
         this.state={
-            phonenumber:'',
-            userName:''
+            phonenumber:''
         };
     }
    /* async register(phonenumber){

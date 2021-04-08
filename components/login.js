@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet,ScrollView, View, ImageBackground,TextInput,TouchableOpacity, SafeAreaView, KeyboardAvoidingView} from 'react-native'
-import {NavigationAction} from 'react-navigation'
+import { Text, StyleSheet, View, ImageBackground,TextInput,TouchableOpacity, SafeAreaView, KeyboardAvoidingView} from 'react-native'
+
 export default class Loginscreen extends Component {
     constructor(props){
         super(props);
