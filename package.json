@@ -37,7 +37,7 @@
       "supportsTablet": false
     },
     "android": {
-      "package": "com.twominds.ApliNursery"
+      "package": "com.ApliNursery"
     }
   },
   "private": true
