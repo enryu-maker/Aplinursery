@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Loginsreen from './components/login';
 import Registerscreen from './components/register';
 import Homescreen from "./components/home";
+import * as firebase from 'firebase'
 const Stack = createStackNavigator();
 
 function App() {
